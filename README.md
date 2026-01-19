@@ -1,2 +1,3 @@
 # vernam-cipher-verilog-implementation
-encryption at hardware level
+Implementation of the ceaser cipher using verilog 
+(Encryption at hardware level)
