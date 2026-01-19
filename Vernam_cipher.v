@@ -1,24 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 19.01.2026 18:41:27
-// Design Name: 
-// Module Name: Vernam_cipher
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module Vernam_cipher(
     input [7:0] Plaintext,
@@ -28,10 +8,10 @@ module Vernam_cipher(
     wire [4:0] p;
     wire [4:0] k;
     wire [5:0] c;
-    
+    //ASCII to 0 to 25 alphabet
     assign p = Plaintext - 8'd65;
     assign k = Key - 8'd65;
     assign c = p + k;
-    
+    //conversion back to the ASCII character
     assign ciphertext =(c>=26) ? (c - 26 + 8'd65): (c + 8'd65);
 endmodule
